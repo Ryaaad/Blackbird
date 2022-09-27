@@ -23,7 +23,7 @@ const Added = useSelector((state:any) => state.man.Added);
 
 return(
     <>
-     <div className=" relative xl:w-[180px] w-[200px] h-[270px] "
+     <div className=" relative xl:w-[180px] w-[200px] h-[270px] z-10 "
      onMouseOver={()=>{setVis(true),seticon(true) }}
       onMouseOut={()=>{setVis(false),seticon(false)}} >
         

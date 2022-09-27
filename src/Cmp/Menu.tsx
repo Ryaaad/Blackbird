@@ -4,7 +4,7 @@ import { Click} from '../features/Menu/menuSlice';
 import { MdFavorite } from "react-icons/md";
 import { BsFillPiggyBankFill } from "react-icons/bs";
 import { FaShoppingCart } from "react-icons/fa";
-
+import {OpenClose } from '../features/Manuelle/ManSlice'
   
 
 
@@ -38,7 +38,9 @@ return(
       mx-5 cursor-pointer rounded-[20%] h-10 w-10 bg-black "
       onClick={()=>dispatch(Click())}
       >
-   <FaShoppingCart className='text-[#006480] font-semibold text-xl ' ></FaShoppingCart>
+   <FaShoppingCart className='text-[#006480] font-semibold text-xl '
+   onClick={()=>{dispatch(OpenClose())}}
+   ></FaShoppingCart>
    { amount>0 &&
  <p className="absolute h-[24px] w-[24px] text-[12px] top-[-30%] right-[-30%]
   border-white border-solid border-[3px] bg-[red] 

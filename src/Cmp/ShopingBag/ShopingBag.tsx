@@ -2,7 +2,6 @@ import { FiX} from 'react-icons/fi'
 import { useDispatch, useSelector } from 'react-redux';
 import Product from './Product';
 import {OpenClose,AddOpen,AddClose} from "../../features/Manuelle/ManSlice"
-import {deleteproduct,reduceproduct,calcTotal} from "../../features/Cart/cartSlice"
 import {useEffect, useState } from "react"
 import Line from './Line'
 
@@ -13,7 +12,7 @@ const ShoppingBag:React.FC<props>=(props)=>{
     const Bag = useSelector((state:any) => state.cart.Bag);
     const {amount,total} = useSelector((state:any) => state.cart);
     const dispatch=useDispatch()
-    useEffect(()=>{dispatch(calcTotal())},[amount]);
+   
    
     
  if(props.Add){

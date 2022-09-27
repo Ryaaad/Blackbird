@@ -12,7 +12,7 @@ Added:{etat:false,Product: {
   img: ['string[]',''],
   amount: 0,
 }},
-
+Checkout:true
 };
 
 const manSlice = createSlice({
@@ -29,10 +29,13 @@ AddOpen:(state , action: PayloadAction<string>)=>{
 },
 AddClose:(state)=>{
 state.Added.etat=false
+},
+CheckoutOC:(state)=>{
+state.Checkout=!state.Checkout
 }
   }
 });
 
 
-export const {OpenClose,AddOpen,AddClose} = manSlice.actions;
+export const {OpenClose,AddOpen,CheckoutOC,AddClose} = manSlice.actions;
   export default manSlice.reducer
