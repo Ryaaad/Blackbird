@@ -1,10 +1,10 @@
 import { useSelector,useDispatch } from 'react-redux';
 import { FiMenu,FiX  } from "react-icons/fi";
-import { Click} from '../features/Menu/menuSlice';
+import { Click} from '../../features/Menu/menuSlice';
 import { MdFavorite } from "react-icons/md";
 import { BsFillPiggyBankFill } from "react-icons/bs";
 import { FaShoppingCart } from "react-icons/fa";
-import {OpenClose } from '../features/Manuelle/ManSlice'
+import {OpenClose } from '../../features/Manuelle/ManSlice'
   
 
 

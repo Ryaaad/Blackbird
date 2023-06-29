@@ -2,8 +2,8 @@ import { HiSearch } from "react-icons/hi";
 import { FiShoppingBag } from "react-icons/fi";
 import { CgMenuGridR } from "react-icons/cg";
 import { useDispatch, useSelector } from "react-redux";
-import ShoppingBag from "./ShopingBag/ShopingBag";
-import {OpenClose} from "../features/Manuelle/ManSlice"
+import ShoppingBag from "../ShopingBag/ShopingBag";
+import {OpenClose} from "../../features/Manuelle/ManSlice"
 
 const Navbar=()=>{
     const amount = useSelector((state:any) => state.cart.amount);
@@ -13,7 +13,7 @@ const Navbar=()=>{
     <div className="p-[5px] px-10 md:px-4">
         <div  className=" items-center flex justify-between md:hidden " >
             <div className="relative flex gap-2 items-center ">
-            <input type="text  " className="h-[34px] py-1 px-4 font-bold rounded-full border border-solid
+            <input type="text  " className="h-[34px] py-1 px-4 font-semibold rounded-full border border-solid
              border-[#e6e3e3f2] w-[240px] focus:outline-0 "  placeholder="Search..." />
           <HiSearch  className="absolute text-xl right-[20%] top-[20%] text-[#5c5a5a] " ></HiSearch> 
 

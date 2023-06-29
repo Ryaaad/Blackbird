@@ -1,15 +1,15 @@
-import lady from '../assets/img/lady.webp'
-import flower from '../assets/img/flower.webp'
-import ladyhand from '../assets/img/ladyhand.webp'
-import shoes from '../assets/img/shoes.webp'
-import pinkbg from '../assets/img/pinkbg.webp'
-import { moved } from '../features/Cart/cartSlice';
+import lady from '../../assets/img/HeroPart/lady.webp'
+import flower from '../../assets/img/HeroPart/flower.webp'
+import ladyhand from '../../assets/img/HeroPart/ladyhand.webp'
+import shoes from '../../assets/img/HeroPart/shoes.webp'
+import pinkbg from '../../assets/img/HeroPart/pinkbg.webp'
+import { moved } from '../../features/Cart/cartSlice';
 import Item from './Item'
 import { BsArrowRight,BsArrowUp,BsArrowLeft,BsMessenger } from "react-icons/bs"
 import { useDispatch, useSelector } from 'react-redux'
-import data from '../data/data'
+import data from '../../data/data'
 import { useEffect, useState } from 'react'
-import Menuu from './Menu'
+import Menuu from '../shared/Menu'
 const Landing=()=>{
   const goToTop = () => {
     window.scrollTo({

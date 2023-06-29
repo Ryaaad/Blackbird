@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Product from './Product';
 import {OpenClose,AddOpen,AddClose} from "../../features/Manuelle/ManSlice"
 import {useEffect, useState } from "react"
-import Line from './Line'
+import Line from '../shared/Line'
 
 interface props{
 Add?:boolean

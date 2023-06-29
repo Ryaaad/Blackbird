@@ -1,6 +1,5 @@
-
 import { useDispatch, useSelector } from "react-redux";
-import Checkoutitem from "./Checkoutitem";
+import Item from "./Item";
 const Checkout = () => {
     const {Bag,amount,total} = useSelector((state:any) => state.cart);
  if(Bag[1])   return ( 
@@ -9,7 +8,7 @@ const Checkout = () => {
                { <h1 className="text-3xl font-semibold" > Shoping Bag </h1>}
            <div className="grid gap-5 mt-10 ">
                 { Bag.map((bag:any)=>{
-                        return <Checkoutitem key={bag.id} {...bag} ></Checkoutitem>
+                        return <Item key={bag.id} {...bag} ></Item>
                     })}
                 </div> 
             </div>

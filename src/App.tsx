@@ -1,12 +1,11 @@
-import Navbar from "./Cmp/Navbar"
-import Landing from "./Cmp/Landing"
+import Navbar from "./Cmp/shared/Navbar"
+import Landing from "./Cmp/Home/Landing"
 import ShoppingBag from "./Cmp/ShopingBag/ShopingBag"
 import { useSelector,useDispatch } from "react-redux"
-import Checkout from "./Cmp/ShopingBag/Checkout"
+import Checkout from "./Cmp/Checkout/Checkout"
 import WebFont from 'webfontloader';
 import {deleteproduct,reduceproduct,calcTotal} from "./features/Cart/cartSlice"
 import { useEffect  } from "react";
-
 function App() {
   const Added = useSelector((state:any) => state.man.Added);
   const dispatch=useDispatch()
@@ -18,7 +17,7 @@ function App() {
     });
    }, []);
    const {amount} = useSelector((state:any) => state.cart);
-   const {Checkout} = useSelector((state:any) => state.man);
+  //  const {Checkout} = useSelector((state:any) => state.man);
    useEffect(()=>{dispatch(calcTotal())},[amount]);
   return (
   <>
@@ -34,7 +33,19 @@ function App() {
      </>  }
 
   <Landing></Landing>
-  
+
+  {/* <div className="bg-[green] ">
+  <Shoped     id="s"
+    img="string"
+    Type="string"
+    title="string"
+    price={1000}
+    Promotion={55}
+  ></Shoped>
+
+  </div> */}
+  <Checkout></Checkout>
+ 
   </>
   )
 }

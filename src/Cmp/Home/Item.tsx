@@ -3,12 +3,12 @@ import pants from '../assets/img/pants.jfif'
 import shoes from '../assets/img/shoes.jpg'
 import gun from '../assets/img/gun.jpg'
 import { useDispatch ,useSelector } from "react-redux";
-import ImgHandler from './ItemImg/ImgHandler';
+import ImgHandler from '../ItemImg/ImgHandler';
 import { useEffect } from 'react'
 // import { increase , Fav,Buy} from '../features/Cart/Cartslice';
 
 // import { FavSec} from '../features/Cart/Cartslice'; 
-import '../index.css'
+
 
 interface props{
     id:string,

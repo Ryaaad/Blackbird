@@ -13,7 +13,7 @@ interface props{
   Promotion:number,
   amount:number,
 }
-const Checkoutitem:React.FC<props> = (props) => {
+const Item:React.FC<props> = (props) => {
     // const bagshop = useSelector((state:any) => state.man.Bagshop);
    
     
@@ -78,4 +78,4 @@ const Checkoutitem:React.FC<props> = (props) => {
   )
 }
  
-export default Checkoutitem;
+export default Item;
