@@ -23,46 +23,41 @@ const Added = useSelector((state:any) => state.man.Added);
 
 return(
     <>
-     <div className=" relative xl:w-[180px] w-[200px] h-[270px] z-10 "
+     <div className=" relative w-full h-full z-10 "
      onMouseOver={()=>{setVis(true),seticon(true) }}
       onMouseOut={()=>{setVis(false),seticon(false)}} >
         
   {props.img.length===3 && 
   <> 
-  <div className=" x xl:w-[calc(180px/3)] w-[calc(200px/3)] h-[270px] absolute flex items-end top-0 left-0 z-30   ">
-  <div className={`A w-full bg-[#deddddfb] h-[0px] duration-200 
-   ${visible?'h-[5px]':'h-[0px]'} ease-in-out`} ></div> 
+  <div className=" x w-[33.4%] h-full absolute flex items-end top-0 left-0 z-30 ">
+  <div className={`A w-full bg-[#deddddfb] h-[0px] duration-200  ${visible?'h-[5px]':'h-[0px]'} ease-in-out`} ></div> 
  </div>
 
- <div className=" x xl:w-[calc(180px/3)] w-[calc(200px/3)] h-[270px] absolute flex items-end top-0 left-[33.5%] 
- z-30 " onMouseOver={()=>{setpic(props.img[1])}} onMouseOut={()=>{setpic(props.img[0])}}
- >
-  <div className={`A w-full bg-[#deddddfb] h-[0px] duration-200 
-   ${visible?'h-[5px]':'h-[0px]'} ease-in-out`}></div>
+ <div className=" x w-[calc(33.4%)] h-full absolute flex items-end top-0 left-[33.5%] z-30 " 
+ onMouseOver={()=>{setpic(props.img[1])}} onMouseOut={()=>{setpic(props.img[0])}}>
+  <div className={`A w-full bg-[#deddddfb] h-[0px] duration-200 ${visible?'h-[5px]':'h-[0px]'} ease-in-out`}></div>
  </div>
 
- <div className= " x   xl:w-[calc(180px/3)] w-[calc(200px/3)] h-[270px] absolute flex items-end top-0 right-0 z-30 "
- onMouseOver={()=>{setpic(props.img[2])}} onMouseOut={()=>{setpic(props.img[0])}}
- >
-  <div className={`A w-full bg-[#deddddfb] h-[0px] duration-200 
-   ${visible?'h-[5px]':'h-[0px]'} ease-in-out`}></div> 
+ <div className= " x w-[calc(33.4%)] h-full absolute flex items-end top-0 right-0 z-30 "
+ onMouseOver={()=>{setpic(props.img[2])}} onMouseOut={()=>{setpic(props.img[0])}}>
+  <div className={`A w-full bg-[#deddddfb] h-[0px] duration-200 ${visible?'h-[5px]':'h-[0px]'} ease-in-out`}></div> 
  </div>
- <img src={pic} className=" h-[270px] bg-cover bg-center brightness-95  " />
+ <img src={pic} className=" h-full bg-cover bg-center brightness-95 w-full " />
  </>
   }
 {props.img.length===2 && 
   <> 
-  <div className=" x  xl:w-[calc(180px/2)] w-[calc(200px/2)] h-[270px] absolute flex items-end top-0 left-0 z-30  ">
+  <div className=" x w-[50%] h-full absolute flex items-end top-0 left-0 z-30">
   <div className={`A w-full bg-[#deddddfb] h-[0px] duration-200 
    ${visible?'h-[5px]':'h-[0px]'} ease-in-out`} ></div> 
  </div>
- <div className= " x xl:w-[calc(180px/2)] w-[calc(200px/2)] h-[270px] absolute flex items-end top-0 right-0 z-30 "
+ <div className= " x w-[50%] h-full absolute flex items-end top-0 right-0 z-30"
  onMouseOver={()=>{setpic(props.img[1])}} onMouseOut={()=>{setpic(props.img[0])}}
  >
   <div className={`A w-full bg-[#deddddfb] h-[0px] duration-200 
    ${visible?'h-[5px]':'h-[0px]'} ease-in-out`}></div> 
  </div>
- <img src={pic} className=" h-[270px] bg-cover bg-center brightness-95 " />
+ <img src={pic} className=" h-full bg-cover bg-center brightness-95 w-full " />
  </>
   }
     </div>

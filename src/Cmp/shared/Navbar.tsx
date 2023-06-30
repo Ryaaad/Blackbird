@@ -77,13 +77,12 @@ const Navbar=()=>{
 
 
 {/* Menu */}
-<ul className='flex w-full wrap items-center text-[#3b3b3b] font-["Roboto",sans-serif] justify-center gap-[70px] text-sm uppercase border-b-black p-2 mt-12 
-     font-semibold border-b-solid border-b-[3px] lg:gap-9 tracking-wider md:hidden'>
+<ul className='flex w-full wrap items-center text-[#3b3b3b] font-["Roboto",sans-serif] justify-between p-2 px-[150px] uppercase border-b-black mt-12 text-sm font-semibold border-b-solid border-b-[3px] 
+tracking-wider md:hidden lg:gap-9 '>
      <li>home</li>
      <li>shop</li>
      <li>featured</li>
      <li>products</li>
-     <li>blog</li>
      <li>lookbook</li>
      <li>contact us</li>
 </ul>

@@ -16,9 +16,8 @@ const Menuu=()=>{
   const {Menu} = useSelector((state:any) => state.menu);
   const dispatch=useDispatch()
 return(
-    <div className="menu fixed z-10 top-[40%] right-[1%]">
-    <div className="grid items-center hover:scale-105 duration-[0.5s] justify-center z-10
-     cursor-pointer rounded-full h-[60px] w-[60px] bg-black   "
+    <div className="menu absolute z-50 top-[0%] right-[1%]">
+    <div className="grid items-center hover:scale-105 duration-[0.5s] justify-center z-10 cursor-pointer rounded-full h-[55px] w-[55px] bg-black   "
       onClick={()=>dispatch(Click())}
       >
     { !Menu && <>
