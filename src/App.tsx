@@ -6,6 +6,7 @@ import Checkout from "./Cmp/Checkout/Checkout"
 import WebFont from 'webfontloader';
 import {deleteproduct,reduceproduct,calcTotal} from "./features/Cart/cartSlice"
 import { useEffect  } from "react";
+import Footer from "./Cmp/shared/Footer"
 function App() {
   const Added = useSelector((state:any) => state.man.Added);
   const dispatch=useDispatch()
@@ -34,17 +35,7 @@ function App() {
 
   <Landing></Landing>
 
-  {/* <div className="bg-[green] ">
-  <Shoped     id="s"
-    img="string"
-    Type="string"
-    title="string"
-    price={1000}
-    Promotion={55}
-  ></Shoped>
-
-  </div> */}
-  <Checkout></Checkout>
+  <Footer></Footer>
  
   </>
   )
