@@ -4,10 +4,10 @@ module.exports = {
   './src/**/*.{vue,jsx,ts,tsx,js}',],
   theme: {
     extend: {  screens: {
-      sm: {'max':'480px'},
-      md: {'max':'768px' },
-      lg: {'max':'976px'},
-      xl: {'max':'1115px'},
+      Msm: {'max':'480px'},
+      Mmd: {'max':'768px' },
+      Mlg: {'max':'976px'},
+      Mxl: {'max':'1115px'},
       smm: '481px',
       mdm:'769px',
       lgm: '977px',

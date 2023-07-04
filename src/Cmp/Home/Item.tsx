@@ -28,10 +28,10 @@ const Card:React.FC<props> = (props)=>{
    const [width, setwidth] = useState(`50px`)
     if(props.type){
 return(
-    <div  style={{ backgroundImage: `url( ${props.img})` }} className={`relative bg-cover bg-center `} >
-    <div  className='py-3 bg-[#ffffffd1] text-center absolute bottom-[7%] right-[50%] translate-x-[50%] h-[90px] w-[80%] lg:w-[90%] lg:h-[100px] '>
-      <p  className="font-['Archivo Narrow',sans-serif] font-semibold text-[#4c4c4c] italic" >{props.Slogan}</p>
-      <h2  className="text-lg font-semibold text-[#444444] tracking-wider uppercase font-['Roboto',sans-serif]  "  >{props.type}</h2>
+    <div  style={{ backgroundImage: `url( ${props.img})` }} className={`relative bg-cover bg-center w-full h-full `} >
+    <div  className='py-5 bg-[#ffffffd1] text-center absolute bottom-[7%] right-[50%] min-h-max translate-x-[50%] w-[85%] xl:py-6 xl:w-[90%]  '>
+      <p  className="font-['Archivo Narrow',sans-serif] font-semibold text-[#4c4c4c] italic sm:text-xs md:text-sm xl:text-lg" >{props.Slogan}</p>
+      <h2  className="font-semibold text-[#444444] tracking-wider uppercase font-['Roboto',sans-serif] sm:text-sm md:text-base xl:text-xl "  >{props.type}</h2>
     </div>
 
   </div>
@@ -49,35 +49,35 @@ return(
   //   // dispatch(FavSec())
   // },[props.fav])
 return (
-    <div  >
- <div className={`relative w-full h-[70%] bg-cover bg-center font-['Roboto',sans-serif] `}  >
+<div>
+ <div className={`relative w-full bg-cover bg-center font-['Roboto',sans-serif]`}  >
   
    <ImgHandler fav={props.fav} id={props.id} img={props.img}></ImgHandler>
-   <div  className='bg-[#313537] grid text-white text-[11px] uppercase justify-center content-center absolute top-[5%] right-[15px] h-[23px] w-[48px] xl:right-[29%] z-10 '>New </div>
+   <div  className='bg-[#313537] grid text-white text-xs uppercase justify-center absolute top-3 right-4 py-1 w-12 z-10 2xl:w-14 2xl:text-sm'>New </div>
 
    {props.Promotion>0 && 
-    <div  className='bg-[#a40e1c] grid text-white text-[11px] uppercase justify-center content-center font-semibold absolute top-[17%] right-[15px] h-[23px] w-[48px] font-["Roboto",sans-serif]
-     xl:right-[29%] z-10 '>- {props.Promotion}%
+    <div  className='bg-[#a40e1c] grid text-white text-xs uppercase justify-center font-semibold absolute top-12 right-4 py-1 w-12 font-["Roboto",sans-serif] z-10  2xl:w-14 2xl:text-sm'>
+      - {props.Promotion}%
     </div> }
 
    
  </div>
-  <div className="grid gap-2 mt-2 grid-cols-[70px,125px] py-1 h-[30%] ">
-  <div className='h-[90px] grid items-center content-center justify-center border-r border-r-[#b1b1b1] border-r-solid '  >
+  <div className="mt-2 py-1 flex items-center ">
+  <div className='h-20 grid items-center content-center justify-center border-r border-r-[#b1b1b1] border-r-solid pr-4 mr-4'>
    {props.Promotion>0 && <div>
-    <p   className='text-sm text-[#9b9b9b] line-through ' > ${props.price} </p>  <p  className="font-semibold text-[15px] "  >  ${ Newprice  } </p>
+    <p   className=' text-[#9b9b9b] line-through md:text-sm lg:text-xs 2xl:text-sm'> ${props.price} </p>  <p  className="font-semibold md:text-lg lg:text-sm 2xl:text-lg">  ${ Newprice  } </p>
     </div> }
-    {props.Promotion===0 &&  <p className="font-semibold text-[15px] "  > ${props.price} </p>}
+    {props.Promotion===0 && <p className="font-semibold md:text-lg lg:text-sm 2xl:text-lg "> ${props.price} </p>}
    </div>
 
 
- <div  className='h-[95px] grid items-center content-start'>
- <p  className='text-[#b1b1b1] text-[15px] w-[90%] leading-[15px] my-2 ' > {props.mark} </p>
- <h2  className='text-sm text-[#444444] ' >{props.title}</h2> 
+ <div  className='grid items-center content-start'>
+ <p  className='text-[#b1b1b1] md:text-lg lg:text-sm w-[90%] 2xl:text-base' > {props.mark} </p>
+ <h2  className='text-[#444444] md:text-sm lg:text-xs 2xl:text-sm' >{props.title}</h2> 
  </div>
   
     </div>
-    </div>
+</div>
 )
 }
 

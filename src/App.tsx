@@ -43,7 +43,9 @@ useEffect(()=>{
 
   return (
   <div  className="relative" >
+    <div className="hidden">
   <Navbar></Navbar>
+    </div>
  
   {Added.etat && <>
         <div className="fixed h-[100vh] w-full z-[120] top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%] "  

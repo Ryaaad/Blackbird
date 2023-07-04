@@ -30,7 +30,6 @@ const Navbar=()=>{
     <ul className="flex  items-center uppercase font-semibold text-sm gap-7
      text-[#5c5a5a] ">
         <li>Sign in</li>
-        <li>Cart</li>
         <li>Account</li>
     </ul>
         </div>
@@ -44,7 +43,7 @@ const Navbar=()=>{
 <div className="relative flex gap-2 items-center ">
             <input type="text  " className="h-[34px] py-1 px-4 font-bold rounded-full border
              border-solid
-             border-[#e6e3e3f2] w-[200px] focus:outline-0 "  placeholder="Search..." />
+             border-[#e6e3e3f2] w-[200px] focus:outline-0"  placeholder="Search..." />
           <HiSearch  className="absolute text-xl right-[20%] top-[20%] text-[#5c5a5a] " >
             </HiSearch> 
 
