@@ -221,7 +221,7 @@ return(
       />
   </div>
 
-  <div className="w-full relative h-max px-4 ">
+  <div className="w-full relative h-max px-4 sm:hidden ">
       <Swiper
         spaceBetween={30}
         initialSlide={1}

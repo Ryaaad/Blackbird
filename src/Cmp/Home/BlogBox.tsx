@@ -6,7 +6,7 @@ interface props{
 }
 const BlogBox:React.FC<props> = ({img,Title,desc}) => {
     return (
-         <div  className="flex items-center gap-4 sm:gap-2 md:gap-0" >
+         <div  className="flex items-center gap-4 justify-between sm:gap-2 md:gap-0" >
         <img src={img} alt="BlogPic"  className="h-full w-[45%] md:w-[50%] lg:w-[55%]  " />
         <div className="flex flex-col items-start justify-center gap-2 w-full md:gap-5 md:w-[45%] lg:w-[38%]">
             <h1 className="text-[#333] font-[300] text-sm sm:text-xs md:text-lg lg:text-xl 2xl:text-2xl"> {Title} </h1>
