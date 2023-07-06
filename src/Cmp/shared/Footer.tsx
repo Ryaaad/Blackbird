@@ -1,6 +1,7 @@
 import { BsArrowRight } from "react-icons/bs"
 import { FaLinkedinIn, FaFacebookF,FaTwitter } from "react-icons/fa"
-import {TfiYoutube} from "react-icons/tfi"
+import {SiDiscord} from "react-icons/si"
+
 const Footer = () => {
     return ( 
         <>
@@ -15,16 +16,16 @@ const Footer = () => {
         
         <div className="flex items-center justify-center w-full sm:py-6 gap-2  text-[#333] sm:text-lg md:text-xl sm:gap-1 ">
             <div className="hover:bg-[#1884bc] hover:text-white p-3 rounded-[10%] duration-500 cursor-pointer ">
-             <FaLinkedinIn></FaLinkedinIn>
+             <FaLinkedinIn/>
             </div>
             <div className="hover:bg-[#4e69a2] hover:text-white p-3 rounded-[10%] duration-500 cursor-pointer ">
-             <FaFacebookF></FaFacebookF>
+             <FaFacebookF/>
             </div>
             <div className="hover:bg-[#33aaf3] hover:text-white p-3 rounded-[10%] duration-500 cursor-pointer ">
-             <FaTwitter></FaTwitter>
+             <FaTwitter/>
             </div>
-            <div className="hover:bg-[#d13534] hover:text-white p-3 rounded-[10%] duration-500 cursor-pointer ">
-             <TfiYoutube></TfiYoutube>
+            <div className="hover:bg-[#551896] hover:text-white p-3 rounded-[10%] duration-500 cursor-pointer ">
+             <SiDiscord/>
             </div>
         </div>
         <div className="w-full text-center text-sm text-[#333] mb-5 sm:text-[12px] ">Easy returns. Free shipping on orders over $100. Need help?</div>

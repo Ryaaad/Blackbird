@@ -116,12 +116,11 @@ const ShoppingBag:React.FC<props>=(props)=>{
            <nav  className="flex text-xl justify-between p-3 border-b-black border-b-solid border-b w-full " >
             <h1 >Shopping Cart</h1>
             <FiX className='text-2xl cursor-pointer hover:rotate-90 duration-200 ' 
-             onClick={()=>dispatch(OpenClose())}
-            ></FiX>
+             onClick={()=>dispatch(OpenClose())}/>
            </nav>
 
        { Bag.length>1 &&  <div className="w-full mt-2">
-            <div className="max-h-28 px-3 overflow-hidden overflow-y-scroll ">
+            <div className="max-h-40 px-3 overflow-hidden overflow-y-scroll ">
             {Bag.map((Produc:any)=>{
                 return (<Product key={Math.random()}  {...Produc} ></Product>)
             })}

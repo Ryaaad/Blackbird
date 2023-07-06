@@ -63,9 +63,9 @@ useEffect(()=>{
            <BsMessenger className=' text-white text-2xl lg:text-3xl ' ></BsMessenger>
            </div>
           : <div className='rounded-full grid justify-center items-center top-[50%] right-[2%] shadow-md bg-[#eee] duration-1000 z-50 absolute text-[#575757] hover:bg-[#575757] h-12 w-12 lg:h-14 lg:w-14
-           first:hover:text-[#eee] cursor-pointer text-3xl'
+           first:hover:text-[#eee] cursor-pointer'
           onClick={()=>{goToTop()}} >
-           <BsArrowUp ></BsArrowUp>
+           <BsArrowUp className='text-2xl lg:text-3xl ' ></BsArrowUp>
            </div>
   }
   
