@@ -1,6 +1,6 @@
 import { BsArrowRight } from "react-icons/bs"
 import { FaLinkedinIn, FaFacebookF,FaTwitter } from "react-icons/fa"
-import { TfiYoutube} from "react-icons/tfi"
+import {TfiYoutube} from "react-icons/tfi"
 const Footer = () => {
     return ( 
         <>

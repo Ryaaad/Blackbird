@@ -21,9 +21,9 @@ import Blogs from '../../data/Blog'
 import BlogBox from './BlogBox'
 const Landing=()=>{
 
-  const swiperRef = useRef<Swiper | null>(null); 
-  const swiperRefPopular = useRef<Swiper | null>(null); 
-  const swiperRefBlog = useRef<Swiper | null>(null); 
+  const swiperRef = useRef<any>(null); 
+  const swiperRefPopular = useRef<any>(null); 
+  const swiperRefBlog = useRef<any>(null); 
 
   const handleNextSlide = (SwiperName:React.MutableRefObject<any>) => {
         if (SwiperName.current && SwiperName.current.swiper) {
