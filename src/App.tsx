@@ -43,9 +43,8 @@ useEffect(()=>{
 
   return (
   <div  className="relative" >
-    <div className="hidden">
+    
   <Navbar></Navbar>
-    </div>
  
   {Added.etat && <>
         <div className="fixed h-[100vh] w-full z-[120] top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%] "  
@@ -59,11 +58,11 @@ useEffect(()=>{
   <Landing></Landing>
   <Footer></Footer> 
 
-  <div  className='fixed top-[40%] h-[150px] w-[100px] right-[1%] z-50 ' >
-   {!Arr ? <div  className='bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full grid justify-center items-center top-[50%] right-[2%] shadow-lg h-[55px] w-[55px] z-50 absolute cursor-pointer ' >
-           <BsMessenger className=' text-white text-3xl ' ></BsMessenger>
+  <div  className='fixed top-[40%] right-[1%] z-50 w-24 h-32 lg:h-40  ' >
+   {!Arr ? <div  className='bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full grid justify-center items-center top-[50%] right-[2%] shadow-lg z-50 absolute cursor-pointer h-12 w-12 lg:h-14 lg:w-14' >
+           <BsMessenger className=' text-white text-2xl lg:text-3xl ' ></BsMessenger>
            </div>
-          : <div className='rounded-full grid justify-center items-center top-[50%] right-[2%] shadow-md bg-[#eee] h-[55px] duration-1000 w-[55px] z-50 absolute text-[#575757] hover:bg-[#575757]
+          : <div className='rounded-full grid justify-center items-center top-[50%] right-[2%] shadow-md bg-[#eee] duration-1000 z-50 absolute text-[#575757] hover:bg-[#575757] h-12 w-12 lg:h-14 lg:w-14
            first:hover:text-[#eee] cursor-pointer text-3xl'
           onClick={()=>{goToTop()}} >
            <BsArrowUp ></BsArrowUp>

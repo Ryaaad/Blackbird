@@ -41,9 +41,9 @@ const Landing=()=>{
     const dispatch=useDispatch()
 const [LatestFilter, setLatestFilter] = useState('Featured')
 return(
-<div  className="relative mt-5 overflow-hidden">
-  <div className="px-4 max-w- sm:px-8 md:px-5 lg:px-10 mb-10 lg:mb-6 bg-white gap-2 justify-center grid h-auto grid-cols-[20%,21%,13%,21%,20%] grid-rows-[19vw,12vw,19vw] md:grid-cols-[20%,20%,10%,20%,20%] md:grid-rows-[18vw,10vw,18vw] xl:px-28 2xl:px-44 xl:grid-rows-[17vw,9vw,17vw] 
-  xl:grid-cols-[21%,22%,10%,22%,21%] 2xl:py-2 2xl:gap-4">
+<div  className="relative mt-3 overflow-hidden">
+  <div className="px-4 sm:px-8 md:px-5 lg:px-10 mb-10 lg:mb-6 bg-white gap-2 justify-center grid h-auto grid-cols-[20%,21%,13%,21%,20%] grid-rows-[19vw,12vw,19vw] md:grid-cols-[20%,20%,10%,20%,20%] 
+  md:grid-rows-[18vw,10vw,18vw] xl:px-28 2xl:px-44 xl:grid-rows-[17vw,9vw,17vw] xl:grid-cols-[21%,22%,10%,22%,21%] 2xl:py-2 2xl:gap-4">
       <div style={{backgroundImage:`url(${lady})`}} className="bg-black col-start-1 col-end-4 row-start-1 row-end-4 bg-cover bg-center"></div>
         <div style={{backgroundImage:`url(${flower})`}} className="bg-black col-start-4 col-end-5 row-start-1 row-end-2 bg-cover bg-center text-[#ffffff] flex flex-col items-center gap-2 justify-center">
              <p className='text-[1vw]  font-["Archivo_Narrow",sans-serif] tracking-[2px] mb-5 mdm:mb-3 lg:mb-0'>NEW LOOKS </p>
