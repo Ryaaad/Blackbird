@@ -47,16 +47,15 @@ useEffect(()=>{
   <Navbar/>
  
   {Added.etat && <>
-        <div className="fixed h-[100vh] w-full z-[120] top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%] "  
-        >
+        <div className="fixed h-[100vh] w-full z-[120] bottom-0 left-0 ">
      <ShoppingBag Add={true} />
         </div>
        <div className="h-[100vh] fixed top-0 right-0 opacity-100  w-full bg-[#00000099] z-[60] "  ></div>
       
      </>  }
 
-  <Checkout/>
-  {/* <Landing/> */}
+  {/* <Checkout/> */}
+  <Landing/>
   <Footer/> 
 
   <div  className='fixed top-[40%] right-[1%] z-50 w-24 h-32 lg:h-40  ' >

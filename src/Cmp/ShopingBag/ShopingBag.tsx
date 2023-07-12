@@ -17,63 +17,45 @@ const ShoppingBag:React.FC<props>=(props)=>{
     
  if(props.Add){
     const Added = useSelector((state:any) => state.man.Added);
-    useEffect(()=>{},[Added.Product])
-    return(
-    <div className=' grid w-full h-[500px] items-center justify-center  '>
-    <div className=" w-[90vw] bg-white h-[400px] px-4 border border-solid border-black
-     lg:w-[95vw] " >
-              <nav  className="flex text-xl justify-between p-3 px-1 border-b-black
-               border-b-solid  
-              border-b-[1px] w-full " >
-               <h1 className='xl:text-lg' >Product successfully added to your shopping Bag
-               </h1>
-               <FiX className='text-3xl cursor-pointer text-[#ccc] hover:text-[#a4a4a4]
-                duration-500 '
-                onClick={()=>dispatch(AddClose())}
-               ></FiX>
-              </nav>
-   
-     <div className="grid h-[70%] grid-cols-[55%,45%] w-full mt-5 bg-white gap-1 lg:grid-cols-[48%,52%] ">
-               <div className=" p-2  ">
-             <div className="relative h-[80%]  flex items-center gap-5 xl:gap-1 ">
-  <img src={Added.Product.img[0]} className="h-[20vw] w-[15vw] xl:h-[25.5vw] xl:w-[23vw] " />
-      <div className="flex flex-col gap-4 self-start pt-2 text-[24px] leading-[22px]
-       xl:text-[17px] xl:leading-[15px] " >
-      <h1 className="text-[#888888] font-['Roboto',sans-serif]" >{Added.Product.title}</h1>
-     <p  className="font-['Roboto',sans-serif]  "  > $ {Added.Product.price} </p>
-     <div className='text-[1vw] text-[#949494] xl:text-[1.5vw] ' >
-     <p  >Size:<span className='text-[#525252] ' > S </span></p>
-    <p  >Color:<span className='text-[#525252] '> Yellow </span></p>
-    <p  >Quantity:<span className='text-[#525252] '> 2 </span></p>  
-     </div>
-   
-   </div>
-            </div>
-               </div>
-               <div className="p-2 px-6 pl-10 border-l-[1px] border-l-solid border-l-[#ccc] ">
-                <h1 className='text-[#414141] text-[17px] leading-[15px] 
-                font-["Roboto",sans-serif] font-[700] xl:text-[14px] xl:leading-[13px] ' >
+ return(
+  <div className=" bg-white px-4 border absolute top-5 md:top-10 right-[50%] translate-x-[50%] border-solid border-black w-[90vw] sm:w-[75vw] md:w-[85vw] xl:w-[80vw] 2xl:w-[75vw]">
+    <nav  className="flex justify-between p-2 md:p-3 px-1 border-b-black border-b-solid border-b w-full" >
+               <h1 className=' text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl' >Product successfully added to your shopping Bag </h1>
+               <FiX className='cursor-pointer text-[#ccc] hover:text-[#a4a4a4] duration-500 text-xl md:text-2xl lg:text-3xl '
+                onClick={()=>dispatch(AddClose())} />
+    </nav>
+    <div className="flex flex-col md:flex-row md:items-start w-full bg-white md:justify-between my-1 md:my-3 xl:my-5">
+         <div className="relative p-2 flex items-center gap-3 xl:gap-5">
+              <img src={Added.Product.img[0]} className="w-28 h-32 md:w-44 md:h-48 lg:w-48 lg:h-52 xl:w-52 xl:h-56"/>
+          <div className="flex flex-col self-start gap-1 md:gap-2 xl:gap-3" >
+           <h1 className="text-[#888888] font-['Roboto',sans-serif] text-sm md:text-base lg:text-xl xl:text-2xl" >{Added.Product.title}</h1>
+           <p className="font-['Roboto',sans-serif] text-xs md:text-sm lg:text-lg xl:text-xl "> $ {Added.Product.price} </p>
+           <div className='text-[#949494] text-xs md:text-sm lg:text-lg xl:text-xl'>
+            <p>Size:<span className='text-[#525252]'> S </span></p>
+            <p>Color:<span className='text-[#525252] '> Yellow </span></p>
+            <p>Quantity:<span className='text-[#525252] '> 2 </span></p>  
+           </div>
+          </div>
+         </div>
+               <div className="p-2 md:border-l md:border-l-solid md:border-l-[#ccc] md:mx-2 min-w-max md:pl-4 lg:pl-5 ">
+                <h1 className='text-[#414141] font-["Roboto",sans-serif] font-bold text-sm md:text-base lg:text-lg' >
                 {amount==1 && <> There is {amount} item in your cart.</> } 
                 {amount>1 && <> There are {amount} items in your cart.</> }   </h1>
-                <div className='p-1' >
+                <div className='flex flex-col mt-2 xl:mt-3' >
                 <Line h='Subtotal' p={total.toFixed(2)} ></Line>
                 <Line h='Shipping' p={7.50} ></Line>
                 <Line h='Total (tax excl.)' p={(total + 7.50).toFixed(2)} ></Line>
                 <Line h='Total (tax incl.)' p={(total + 7.50).toFixed(2)} ></Line>
                 <Line h='Taxes:' p={0.00} last={true} ></Line>
                 </div>
-
-                <div className="btn justify-center text-[#ffffff] flex gap-5 xl:gap-2 ">
-                  <button  className='h-[38px] text-[12px] uppercase p-2 bg-[#313537] w-[180px]
-                   font-["Archivo Narrow",sans-serif] xl:text-[10px]' > confirme purshase </button>  
-                  <button   className='h-[38px] text-[12px] uppercase p-2 bg-[#313537] 
-                  font-["Archivo Narrow",sans-serif]   w-[117px] xl:text-[10px] ' > checkout</button> 
+                <div className="flex justify-start text-[#ffffff] gap-3 my-3 xl:gap-5 xl:my-5">
+                  <button  className='bg-[#313537] font-["Archivo Narrow",sans-serif] text-xs px-2 lg:px-4 p-2 xl:text-base xl:p-3 xl:px-6' > Confirme Purshase </button>  
+                  <button  className='bg-[#313537] font-["Archivo Narrow",sans-serif] text-xs px-2 lg:px-4 p-2 xl:text-base xl:p-3 xl:px-6' > Checkout</button> 
                 </div>
                </div>
     </div>
 
-   </div>
-           </div>
+  </div>
  )}   
  else{  return(
 <div className='grid w-full h-[100vh] items-center justify-center'>
