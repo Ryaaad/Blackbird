@@ -44,32 +44,33 @@ useEffect(()=>{
   return (
   <div  className="relative" >
     
-  <Navbar></Navbar>
+  <Navbar/>
  
   {Added.etat && <>
         <div className="fixed h-[100vh] w-full z-[120] top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%] "  
         >
-     <ShoppingBag Add={true} ></ShoppingBag>
+     <ShoppingBag Add={true} />
         </div>
        <div className="h-[100vh] fixed top-0 right-0 opacity-100  w-full bg-[#00000099] z-[60] "  ></div>
       
      </>  }
 
-  <Landing></Landing>
-  <Footer></Footer> 
+  <Checkout/>
+  {/* <Landing/> */}
+  <Footer/> 
 
   <div  className='fixed top-[40%] right-[1%] z-50 w-24 h-32 lg:h-40  ' >
    {!Arr ? <div  className='bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full grid justify-center items-center top-[50%] right-[2%] shadow-lg z-50 absolute cursor-pointer h-12 w-12 lg:h-14 lg:w-14' >
-           <BsMessenger className=' text-white text-2xl lg:text-3xl ' ></BsMessenger>
+           <BsMessenger className=' text-white text-2xl lg:text-3xl ' />
            </div>
           : <div className='rounded-full grid justify-center items-center top-[50%] right-[2%] shadow-md bg-[#eee] duration-1000 z-50 absolute text-[#575757] hover:bg-[#575757] h-12 w-12 lg:h-14 lg:w-14
            first:hover:text-[#eee] cursor-pointer'
           onClick={()=>{goToTop()}} >
-           <BsArrowUp className='text-2xl lg:text-3xl ' ></BsArrowUp>
+           <BsArrowUp className='text-2xl lg:text-3xl ' />
            </div>
   }
   
-     <Menuu></Menuu>
+     <Menuu/>
 
     </div>
   </div>

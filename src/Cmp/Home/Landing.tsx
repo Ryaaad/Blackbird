@@ -20,9 +20,24 @@ import "swiper/css/navigation";
 import Blogs from '../../data/Blog'
 import BlogBox from './BlogBox'
 const Landing=()=>{
+  
+const getSlidesPerView = () => {
+    if (typeof window !== 'undefined') {
+      const screenWidth = window.innerWidth;
+      if (screenWidth >= 1024) {
+        return 4;
+      } else if (screenWidth >= 768) {
+        return 3;
+      } else if (screenWidth >= 640) {
+        return 2;
+      }
+    }
+    return 1;
+  };
 
   const swiperRef = useRef<any>(null); 
   const swiperRefPopular = useRef<any>(null); 
+  const swiperRefPopularmd = useRef<any>(null); 
   const swiperRefBlog = useRef<any>(null); 
 
   const handleNextSlide = (SwiperName:React.MutableRefObject<any>) => {

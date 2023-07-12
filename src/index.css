@@ -5,3 +5,25 @@
 .x:hover div{
     background-color: #969696;
 }
+/* Track */
+.CustomScroll::-webkit-scrollbar {
+    width: 10px; 
+  }
+  
+  /* Track */
+  .CustomScroll::-webkit-scrollbar-track {
+    background: #f8f8f8de; 
+  }
+  
+  /* Handle */
+  .CustomScroll::-webkit-scrollbar-thumb {
+    background: #d2d0d0; 
+    border-radius: 5px;
+
+  }
+  
+  /* Handle on hover */
+  .CustomScroll::-webkit-scrollbar-thumb:hover {
+    background: #bdbcbc; 
+  }
+  
